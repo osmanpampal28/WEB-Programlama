@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "BlogDetail";
+    Layout = "~/Views/Shared/LayoutProje.cshtml";
+}
+
+
+@Html.Action("Cover_Blog", "Blog");
+
+<section class="site-section py-lg">
+    <div class="container">
+
+        <div class="row blog-entries element-animate">
+
+            <div class="col-md-12 col-lg-8 main-content">
+
+                @Html.Action("BlogLongText", "Blog");
+                @Html.Action("GetComment", "Comment");
+            </div>
+
+            <div class="col-md-12 col-lg-4 sidebar">
+                @Html.Action("AboutWriter", "Writer");
+
+                @Html.Action("WritersPopular", "Writer");
+
+                @Html.Action("CategoryBlogDet", "Categories");
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@*@Html.Action("OtherPosts", "Blog");*@
+
+@Html.Action("AddEmail", "EmailSubscribe");
+
+@Html.Action("Footer", "About");

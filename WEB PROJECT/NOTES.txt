@@ -1,0 +1,155 @@
+01.12.21
+
+
+1 - Entity Layer  (siniflar  ve properties   orn :  blog bir sinif)
+2 - Data Access Layer (crud islemler)
+3 - Business Layer 
+4 - UserInterface    (WebProje)
+
+
+* Code First Yaklasimi
+toplam 4 katmandan olusmali
+
+
+Siniflar Listesi 
+
+- Kategori
+- Blog
+- Hakkimda 
+- Iletisim
+- Admin
+- Yorumlar 
+- Yazarlar
+
+Folder *concrete  -  somut siniflarin oldugu alan 
+
+
+
+iliskiler 
+________________________
+
+
+1)  kategoriler   ve bloglari   
+2)  Yazarlar  ve bloglar     ---->  her bir blogun bir yazari olmali
+3)  Blog ve Yorunlar 
+
+
+
+Entity framework (6)  eklemek
+
+_____________________________________________________________________________________________________________________
+
+
+02.12.21
+
+data access layer - entity' nin siniflari kullanir.
+Context sinifi  - entity layer icerisininde olusturdugum siniflarin veritabanina yansitmak icin bir kopru sinifidir.
+
+/WebProje/webconfig
+* code first yaklasimi icin  connection string tanimlamak
+
+veritabanin olusturulmasi ve iliskiler kurmak 
+diagram cizmek 
+
+
+
+repository design pattern 
+
+
+Interface olusturma  ve kullanacagimiz fonksiyonlari  yazacaz
+<T>  parametre   ve ona gore crud islemleri gerceklestirecez.
+
+Repository sinifini olusturmak  // Generik bir yapi kullanmak
+
+Buisnees layer -  crud islemleri gerceklestirirken  kontrol et eger her şey doğru ise UI layere Gönder
+
+Controller - backend
+View - frontend
+
+
+
+04.12
+
+BlogDetail  Controller olusturmak
+Blog Uzun Metin | ekrani bolme
+
+
+CommentController eklemek ---> blogun yorumlari 
+*GetComment
+*LeaveAComment
+
+WriterController
+*AboutWriter 
+
+AboutController
+*Index
+*Footer
+*WritersTeam
+*LearnFromUs
+
+
+ContactController
+*Index
+*SendMessage
+
+
+
+//________________________END OF SECTION 5 ____________________________
+
+
+Business Layerde  Blog yonetmek icin birtaane sinif olusturmak
+*ControlBlog
+
+
+
+
+05.12
+
+Bloglarin Olusturulmasi 
+Veritabaninda verileri eklemek ve bloglar olusturmak (6 Block)
+
+
+// _______________________END OF SECTION 6 __________________________
+
+
+ViewBag Kullanimi
+One cikan postlarin 
+
+SeeTitle ()
+SeeImage ()
+SeeDate ()
+fonksiyonlari kullanarak  ViewBag KUllanmak
+
+
+
+
+
+
+
+06.12.2021
+
+
+PageLander.Mvc  Kullanimi 
+
+
+07.12.2021
+
+
+- Entity layer / concrete / EmailSubscribe.cs eklemek
+EmailSubscribe  Tablo olusturmak ve Context sinifina baglamak
+
+
+Business layer
+	* ControlEmailSubscribe sinifi olusturmak  
+		- ekleme islemi  AddBusinessL();
+
+
+Proje Layer 
+	* EmailSubscribeController  Olusturmak
+		Partial View AddEmail();  [Http`Get]  / [HttpPost]  // Email eklemek icin 
+
+
+
+
+
+

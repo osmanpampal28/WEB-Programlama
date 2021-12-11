@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutProje.cshtml";
+}
+
+@*partial isim ,  controller isim*@
+
+@Html.Action("GeneralPosts", "Blog");
+@Html.Action("GetBlog", "Blog");        @*Recent posts   burdan alinacak*@
+
+@*@Html.Action("OtherPosts", "Blog");*@
+@Html.Action("AddEmail", "EmailSubscribe");
+@Html.Action("Footer", "About");

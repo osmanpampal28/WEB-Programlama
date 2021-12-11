@@ -1,0 +1,19 @@
+﻿@*Blog Details Cateogiriler*@
+
+@model  IEnumerable<EntityLayer.Concrete.Categories>
+
+<div class="sidebar-box">
+
+    <h3 class="heading">Categories</h3>
+
+   
+    <ul class="categories">
+        @foreach (var x in Model)
+        {
+            <li><a href="#">@x.CategoriesName <span>0</span></a></li>
+        }
+
+    </ul>
+    
+
+</div>
