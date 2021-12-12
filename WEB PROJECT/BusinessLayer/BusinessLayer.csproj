@@ -45,6 +45,7 @@
     <Compile Include="Concrete\ControlBlog.cs" />
     <Compile Include="Concrete\ControlCategories.cs" />
     <Compile Include="Concrete\ControlComment.cs" />
+    <Compile Include="Concrete\ControlContact.cs" />
     <Compile Include="Concrete\ControlEmailSubscribe.cs" />
     <Compile Include="Concrete\ControlWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

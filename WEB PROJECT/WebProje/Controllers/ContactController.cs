@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer.Concrete;
+using EntityLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,8 +11,23 @@ namespace WebProje.Controllers
     public class ContactController : Controller
     {
         // GET: Contact
+
+        ControlContact ccm = new ControlContact();
         public ActionResult Index()
         {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult AddContact()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddContact(Contact con)
+        {
+            ccm.BLContactAdd(con);
             return View();
         }
 

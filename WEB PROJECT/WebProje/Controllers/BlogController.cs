@@ -1,4 +1,6 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using EntityLayer.Concrete;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -80,7 +82,86 @@ namespace WebProje.Controllers
             return View(blogListByCategory);
         }
 
-     
+        public ActionResult AdminBlogList()
+        {
+            var bloglist = obj.ListAll();
+            return View(bloglist);
+        }
+
+        [HttpGet]
+        public ActionResult AddNewBlog()
+        {
+            Context con = new Context();
+            List<SelectListItem> values = (from x in con.CategorieS.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoriesName,
+                                               Value = x.CategoriesID.ToString()
+                                           }).ToList();
+            ViewBag.values = values;
+
+            List<SelectListItem> values2 = (from x in con.Writers.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.WriterN_S,
+                                               Value = x.WriterID.ToString()
+                                           }).ToList();
+            ViewBag.values2 = values2;
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddNewBlog(Blog b)
+        {
+            obj.BlogAddBLayer(b);
+            return RedirectToAction("AdminBlogList");
+        }
+
+        public ActionResult DeleteBlog(int id)
+        {
+            obj.BlogDeleteBLayer(id);
+            return RedirectToAction("AdminBlogList");
+        }
+
+        [HttpGet]
+        public ActionResult UpdateBlog(int id)
+        {
+            Blog b = obj.FindBlog(id);
+
+            Context con = new Context();
+            List<SelectListItem> values = (from x in con.CategorieS.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoriesName,
+                                               Value = x.CategoriesID.ToString()
+                                           }).ToList();
+            ViewBag.values = values;
+
+            List<SelectListItem> values2 = (from x in con.Writers.ToList()
+                                            select new SelectListItem
+                                            {
+                                                Text = x.WriterN_S,
+                                                Value = x.WriterID.ToString()
+                                            }).ToList();
+            ViewBag.values2 = values2;
+
+            return View(b);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateBlog(Blog b)
+        {
+            obj.UpdateBlogBLayer(b);
+            return RedirectToAction("AdminBlogList");
+        }
+
+        public ActionResult GetCommentByBlog(int id)
+        {
+            ControlComment ccm = new ControlComment();
+            var commentlist = ccm.CommentByBlog(id);
+            return View(commentlist);
+        }
         public string SeeTitle(int id, string head)
         {
            head = obj.ListAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoriesID == id).

@@ -16,5 +16,7 @@ namespace DataAccessLayer.Abstract
         OBJ GetByID(int id);
 
         List<OBJ> List(Expression<Func<OBJ, bool>> where);
+
+        OBJ Find(Expression<Func<OBJ, bool>> filter);
     }
 }

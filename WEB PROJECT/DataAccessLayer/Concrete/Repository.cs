@@ -28,6 +28,11 @@ namespace DataAccessLayer.Concrete
             return cnt.SaveChanges();
         }
 
+        public OBJ Find(Expression<Func<OBJ, bool>> filter)
+        {
+            return obj.FirstOrDefault(filter);
+        }
+
         public OBJ GetByID(int id)
         {
             return obj.Find(id);
