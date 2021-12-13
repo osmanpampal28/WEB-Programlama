@@ -17,3 +17,5 @@ C:\Users\TSULUKIDZE\Desktop\WEB PROJECT\DataAccessLayer\obj\Debug\DataAccessLaye
 C:\Users\TSULUKIDZE\Desktop\WEB PROJECT\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 C:\Users\TSULUKIDZE\Desktop\WEB PROJECT\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig2.resources
 C:\Users\TSULUKIDZE\Desktop\WEB PROJECT\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig3.resources
+C:\Users\TSULUKIDZE\Desktop\WEB PROJECT\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig4.resources
+C:\Users\TSULUKIDZE\Desktop\WEB PROJECT\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig5.resources

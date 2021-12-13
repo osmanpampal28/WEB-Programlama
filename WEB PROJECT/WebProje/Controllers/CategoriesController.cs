@@ -23,5 +23,11 @@ namespace WebProje.Controllers
             var values_Categories = obj.List_All();
             return PartialView(values_Categories);
         }
+
+        public ActionResult AdminCategoriesList()
+        {
+            var categorieslist = obj.List_All();
+            return View(categorieslist);
+        }
     }
 }

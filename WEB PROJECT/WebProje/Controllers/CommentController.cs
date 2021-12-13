@@ -33,5 +33,30 @@ namespace WebProje.Controllers
             ccm.CommentAdd(com);
             return PartialView();
         }
+
+        public ActionResult AdminCommentListTrue()
+        {
+            var commentlist = ccm.CommentByStatusTrue();
+            return View(commentlist);
+        }
+
+        public ActionResult AdminCommentListFalse()
+        {
+            var commentlist = ccm.CommentByStatusFalse();
+            return View(commentlist);
+        }
+        public ActionResult StatusChangedToFalse(int id)
+        {
+            ccm.CommentStatusChangeToFalse(id);
+            return RedirectToAction("AdminCommentListTrue");
+        }
+
+        public ActionResult StatusChangedToTrue(int id)
+        {
+            ccm.CommentStatusChangeToTrue(id);
+            return RedirectToAction("AdminCommentListFalse");
+        }
+
+
     }
 }

@@ -1,0 +1,50 @@
+﻿@*admin sayfasında yazarlar listelendiğinde update writer butonu*@
+
+@model EntityLayer.Concrete.Writer
+
+@{
+    ViewBag.Title = "EditWriter";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Name Surname of Writer")
+    @Html.TextBoxFor(x => x.WriterN_S, new { @class = "form-control" })
+    <br />
+
+
+    @Html.Label("Image Path")
+    @Html.TextBoxFor(x => x.WriterImage, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Skills of Writer")
+    @Html.TextBoxFor(x => x.ShortAbout, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Title of Writer")
+    @Html.TextAreaFor(x => x.WriterTitle, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Details")
+    @Html.TextAreaFor(x => x.WriterAbout, 3, 20, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Email Adress")
+    @Html.TextAreaFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Password")
+    @Html.TextAreaFor(x => x.Password, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Phone")
+    @Html.TextAreaFor(x => x.PhoneNumber, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Submit</button>
+</form>
+

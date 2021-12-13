@@ -2466,6 +2466,13 @@
     <Content Include="Views\Blog\AddNewBlog.cshtml" />
     <Content Include="Views\Blog\UpdateBlog.cshtml" />
     <Content Include="Views\Blog\GetCommentByBlog.cshtml" />
+    <Content Include="Views\Writer\ListWriter.cshtml" />
+    <Content Include="Views\Writer\AddWriter.cshtml" />
+    <Content Include="Views\Writer\EditWriter.cshtml" />
+    <Content Include="Views\Comment\AdminCommentListTrue.cshtml" />
+    <Content Include="Views\Comment\AdminCommentListFalse.cshtml" />
+    <Content Include="Views\Categories\AdminCategoriesList.cshtml" />
+    <Content Include="Views\Blog\AdminBlogList2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

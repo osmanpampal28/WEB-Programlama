@@ -88,6 +88,12 @@ namespace WebProje.Controllers
             return View(bloglist);
         }
 
+        public ActionResult AdminBlogList2()
+        {
+            var bloglist = obj.ListAll();
+            return View(bloglist);
+        }
+
         [HttpGet]
         public ActionResult AddNewBlog()
         {
