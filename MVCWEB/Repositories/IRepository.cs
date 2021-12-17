@@ -16,6 +16,7 @@ namespace MVCWEB.Repositories
 
         //List<OBJ> List(Expression<Func<OBJ, bool>> where);
 
+
         //OBJ Find(Expression<Func<OBJ, bool>> filter);
 
     }

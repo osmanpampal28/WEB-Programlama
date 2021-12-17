@@ -6,13 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MVCWEB.Models;
+using MVCWEB.Repositories;
 
 namespace MVCWEB.Controllers
 {
     public class BlogsController : Controller
     {
         private readonly Context _context;
-
+       
         public BlogsController(Context context)
         {
             _context = context;
@@ -160,6 +161,12 @@ namespace MVCWEB.Controllers
         private bool BlogExists(int id)
         {
             return _context.Blogs.Any(e => e.BlogID == id);
+        }
+
+        public ActionResult AdminBlogList()
+        {
+            var context = _context.Blogs.Include(b => b.Categories).Include(b => b.Writer);
+            return View(context);
         }
     }
 }

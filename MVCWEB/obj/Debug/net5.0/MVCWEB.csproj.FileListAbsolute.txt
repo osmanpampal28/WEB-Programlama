@@ -157,3 +157,15 @@ C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blogs\Delete.csh
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blogs\Details.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blogs\Edit.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blogs\Index.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Abouts\Create.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Abouts\Delete.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Abouts\Details.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Abouts\Edit.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Abouts\Index.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Create.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Delete.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Details.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Edit.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blogs\AdminBlogList.cshtml.g.cs

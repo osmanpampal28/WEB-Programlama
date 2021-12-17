@@ -8,15 +8,16 @@ using System.Threading.Tasks;
 
 namespace MVCWEB.Repositories
 {
+   
     public class Repository<OBJ> : IRepository<OBJ> where OBJ : class
     {
         //Context cnt = new Context();
-        ////DbSet<OBJ> obj;
 
+        //public DbSet<OBJ> nesne;
 
         ////public Repository()
         ////{
-        ////    obj = cnt.Set<OBJ>();  // Context uzerinden gonderdigimiz sinifi obj'ye atama.
+        ////    nesne = cnt.Set<OBJ>();  // Context uzerinden gonderdigimiz sinifi obj'ye atama.
         ////}
         //public void Delete(OBJ prm)
         //{
@@ -24,15 +25,15 @@ namespace MVCWEB.Repositories
         //    cnt.SaveChanges();
         //}
 
-        ////public OBJ Find(Expression<Func<OBJ, bool>> filter)
-        ////{
-        ////    return obj.FirstOrDefault(filter);
-        ////}
+        //public OBJ Find(Expression<Func<OBJ, bool>> filter)
+        //{
+        //    return nesne.FirstOrDefault(filter);
+        //}
 
         //public void Get(int id)
         //{
         //    cnt.Set<OBJ>().Find(id);
-           
+
         //}
 
         //public void Insert(OBJ prm)
@@ -43,13 +44,13 @@ namespace MVCWEB.Repositories
 
         //public List<OBJ> List()
         //{
-        //    return cnt.Set<OBJ>().ToList();
+        //    return nesne.ToList();
         //}
 
-        ////public List<OBJ> List(Expression<Func<OBJ, bool>> where)
-        ////{
-        ////    return obj.Where(where).ToList();
-        ////}
+        //public List<OBJ> List(Expression<Func<OBJ, bool>> where)
+        //{
+        //    return nesne.Where(where).ToList();
+        //}
 
         //public void Update(OBJ prm)
         //{

@@ -112,7 +112,7 @@
                                 <span>&nbsp;-&nbsp; @(((DateTime)i.BlogDate).ToString("dd-MMM-yyyy"))</span>
                             </div>
 
-                            <p>@i.BlogDetail.Substring(0, i.BlogDetail.Substring(0, 200).LastIndexOf(""))...</p>
+                            @*<p>@i.BlogDetail.Substring(0, i.BlogDetail.Substring(0, 200).LastIndexOf(""))...</p>*@
                             <p><a href="/Blogs/Details/@i.BlogID">Read More</a></p>
                         </div>
                     </div>

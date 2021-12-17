@@ -34,5 +34,9 @@ namespace MVCWEB.Models
         {
             //nesne.UseSqlServer("server=DESKTOP-D0QHIJN\\SQLEXPRESS; database=DbWeb;integrated security=true ");
         }
+
+        public Context()
+        {
+        }
     }
 }
