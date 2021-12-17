@@ -4,14 +4,16 @@ using MVCWEB.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MVCWEB.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20211217090234_hepsi0")]
+    partial class hepsi0
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -88,7 +90,7 @@ namespace MVCWEB.Migrations
                         .HasMaxLength(110)
                         .HasColumnType("nvarchar(110)");
 
-                    b.Property<int>("CategoriesID")
+                    b.Property<int?>("CategoriesID")
                         .HasColumnType("int");
 
                     b.Property<int>("WriterID")
@@ -252,10 +254,8 @@ namespace MVCWEB.Migrations
             modelBuilder.Entity("MVCWEB.Models.Blog", b =>
                 {
                     b.HasOne("MVCWEB.Models.Categories", "Categories")
-                        .WithMany("Blogs")
-                        .HasForeignKey("CategoriesID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("Blog")
+                        .HasForeignKey("CategoriesID");
 
                     b.HasOne("MVCWEB.Models.Writer", "Writer")
                         .WithMany("Blogs")
@@ -286,7 +286,7 @@ namespace MVCWEB.Migrations
 
             modelBuilder.Entity("MVCWEB.Models.Categories", b =>
                 {
-                    b.Navigation("Blogs");
+                    b.Navigation("Blog");
                 });
 
             modelBuilder.Entity("MVCWEB.Models.Writer", b =>

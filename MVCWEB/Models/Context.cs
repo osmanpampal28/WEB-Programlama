@@ -8,21 +8,18 @@ namespace MVCWEB.Models
 {
     public class Context : DbContext
     {
-        public Context()
-        {
-
-        }
-
-        //public Context(DbContextOptions<Context> nesne) : base(nesne)
+        //public Context()
         //{
-        //    //nesne.UseSqlServer("server=DESKTOP-D0QHIJN\\SQLEXPRESS; database=DbWeb;integrated security=true ");
+
         //}
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-D0QHIJN;Database=DbYeni;Trusted_Connection=True;MultipleActiveResultSets=true");
-            base.OnConfiguring(optionsBuilder);
-        }
+
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Server=DESKTOP-D0QHIJN;Database=DbYeni;Trusted_Connection=True;MultipleActiveResultSets=true");
+        //    base.OnConfiguring(optionsBuilder);
+        //}
 
         public DbSet<About> Abouts { get; set; }
         public DbSet<Admin> Admins { get; set; }
@@ -32,5 +29,10 @@ namespace MVCWEB.Models
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Writer> Writers { get; set; }
         public DbSet<EmailSubscribe> EmailSubscribes { get; set; }
+
+        public Context(DbContextOptions<Context> nesne) : base(nesne)
+        {
+            //nesne.UseSqlServer("server=DESKTOP-D0QHIJN\\SQLEXPRESS; database=DbWeb;integrated security=true ");
+        }
     }
 }

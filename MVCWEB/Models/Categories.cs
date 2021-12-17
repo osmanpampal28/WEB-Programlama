@@ -22,6 +22,6 @@ namespace MVCWEB.Models
 
         [StringLength(500)]
         public string CategoryDescription { get; set; }
-        public ICollection<Blog> Blog { get; set; } // Categories  ve Blog siniflar arasinda iliski kurmak.
+        public ICollection<Blog> Blogs { get; set; } // Categories  ve Blog siniflar arasinda iliski kurmak.
     }
 }

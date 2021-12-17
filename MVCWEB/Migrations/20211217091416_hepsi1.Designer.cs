@@ -4,14 +4,16 @@ using MVCWEB.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MVCWEB.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20211217091416_hepsi1")]
+    partial class hepsi1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -252,7 +254,7 @@ namespace MVCWEB.Migrations
             modelBuilder.Entity("MVCWEB.Models.Blog", b =>
                 {
                     b.HasOne("MVCWEB.Models.Categories", "Categories")
-                        .WithMany("Blogs")
+                        .WithMany("Blog")
                         .HasForeignKey("CategoriesID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -286,7 +288,7 @@ namespace MVCWEB.Migrations
 
             modelBuilder.Entity("MVCWEB.Models.Categories", b =>
                 {
-                    b.Navigation("Blogs");
+                    b.Navigation("Blog");
                 });
 
             modelBuilder.Entity("MVCWEB.Models.Writer", b =>

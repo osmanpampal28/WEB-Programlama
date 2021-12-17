@@ -145,8 +145,6 @@ C:\Users\TSULUKIDZE\Desktop\MVCWEB\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalys
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Shared\LayoutProje.cshtml.g.cs
-C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Categories\Index.cshtml.g.cs
-C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blog\Index.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\bin\Debug\net5.0\PagedList.dll
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\bin\Debug\net5.0\PagedList.Mvc.dll
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\bin\Debug\net5.0\JetBrains.Annotations.dll
@@ -154,4 +152,8 @@ C:\Users\TSULUKIDZE\Desktop\MVCWEB\bin\Debug\net5.0\X.PagedList.dll
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\MVCWEB.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\bin\Debug\net5.0\System.Web.Http.Common.dll
-C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blog\GetBlog.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blogs\Create.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blogs\Delete.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blogs\Details.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blogs\Edit.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blogs\Index.cshtml.g.cs

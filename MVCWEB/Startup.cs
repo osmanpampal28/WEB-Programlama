@@ -27,8 +27,8 @@ namespace MVCWEB
         {
 
             services.AddControllersWithViews();
-            //var connection = @"server=.; database=DbWEB; trusted_connection = true;";
-            //services.AddDbContext<Context>(options => options.UseSqlServer(connection));
+            var connection = @"Server=DESKTOP-D0QHIJN;Database=DbWeb;Trusted_Connection=True;MultipleActiveResultSets=true";
+            services.AddDbContext<Context>(options => options.UseSqlServer(connection));
             
         }
 

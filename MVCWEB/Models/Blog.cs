@@ -25,8 +25,7 @@ namespace MVCWEB.Models
 
         //  Blog - Categories
 
-        //public int CategoriesID { get; set; }
-        [ForeignKey ("CategoriesID")]
+        public int CategoriesID { get; set; }
         public Categories Categories { get; set; }  // Categories  ve Blog siniflar arasinda iliski kuruldu.
 
         // Blog - Writer
