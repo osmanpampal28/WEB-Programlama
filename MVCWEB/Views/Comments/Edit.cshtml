@@ -1,0 +1,57 @@
+﻿@model MVCWEB.Models.Comments
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Comments</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CommentsID" />
+            <div class="form-group">
+                <label asp-for="UserN" class="control-label"></label>
+                <input asp-for="UserN" class="form-control" />
+                <span asp-validation-for="UserN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CommentDetail" class="control-label"></label>
+                <input asp-for="CommentDetail" class="form-control" />
+                <span asp-validation-for="CommentDetail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CommentDate" class="control-label"></label>
+                <input asp-for="CommentDate" class="form-control" />
+                <span asp-validation-for="CommentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CommentStatus" /> @Html.DisplayNameFor(model => model.CommentStatus)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogID" class="control-label"></label>
+                <select asp-for="BlogID" class="form-control" asp-items="ViewBag.BlogID"></select>
+                <span asp-validation-for="BlogID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

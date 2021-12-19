@@ -9,22 +9,23 @@ using MVCWEB.Models;
 
 namespace MVCWEB.Controllers
 {
-    public class CategoriesController : Controller
+    public class CommentsController : Controller
     {
         private readonly Context _context;
 
-        public CategoriesController(Context context)
+        public CommentsController(Context context)
         {
             _context = context;
         }
 
-        // GET: Categories
+        // GET: Comments
         public async Task<IActionResult> Index()
         {
-            return View(await _context.CategorieS.ToListAsync());
+            var context = _context.CommentS.Include(c => c.Blogs);
+            return View(await context.ToListAsync());
         }
 
-        // GET: Categories/Details/5
+        // GET: Comments/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,39 +33,42 @@ namespace MVCWEB.Controllers
                 return NotFound();
             }
 
-            var categories = await _context.CategorieS
-                .FirstOrDefaultAsync(m => m.CategoriesID == id);
-            if (categories == null)
+            var comments = await _context.CommentS
+                .Include(c => c.Blogs)
+                .FirstOrDefaultAsync(m => m.CommentsID == id);
+            if (comments == null)
             {
                 return NotFound();
             }
 
-            return View(categories);
+            return View(comments);
         }
 
-        // GET: Categories/Create
+        // GET: Comments/Create
         public IActionResult Create()
         {
+            ViewData["BlogID"] = new SelectList(_context.Blogs, "BlogID", "BlogID");
             return View();
         }
 
-        // POST: Categories/Create
+        // POST: Comments/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoriesID,CategoriesName,CategoryDescription")] Categories categories)
+        public async Task<IActionResult> Create([Bind("CommentsID,UserN,Email,CommentDetail,CommentDate,CommentStatus,BlogID")] Comments comments)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(categories);
+                _context.Add(comments);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(categories);
+            ViewData["BlogID"] = new SelectList(_context.Blogs, "BlogID", "BlogID", comments.BlogID);
+            return View(comments);
         }
 
-        // GET: Categories/Edit/5
+        // GET: Comments/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,22 +76,23 @@ namespace MVCWEB.Controllers
                 return NotFound();
             }
 
-            var categories = await _context.CategorieS.FindAsync(id);
-            if (categories == null)
+            var comments = await _context.CommentS.FindAsync(id);
+            if (comments == null)
             {
                 return NotFound();
             }
-            return View(categories);
+            ViewData["BlogID"] = new SelectList(_context.Blogs, "BlogID", "BlogID", comments.BlogID);
+            return View(comments);
         }
 
-        // POST: Categories/Edit/5
+        // POST: Comments/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CategoriesID,CategoriesName,CategoryDescription")] Categories categories)
+        public async Task<IActionResult> Edit(int id, [Bind("CommentsID,UserN,Email,CommentDetail,CommentDate,CommentStatus,BlogID")] Comments comments)
         {
-            if (id != categories.CategoriesID)
+            if (id != comments.CommentsID)
             {
                 return NotFound();
             }
@@ -96,12 +101,12 @@ namespace MVCWEB.Controllers
             {
                 try
                 {
-                    _context.Update(categories);
+                    _context.Update(comments);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CategoriesExists(categories.CategoriesID))
+                    if (!CommentsExists(comments.CommentsID))
                     {
                         return NotFound();
                     }
@@ -112,10 +117,11 @@ namespace MVCWEB.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(categories);
+            ViewData["BlogID"] = new SelectList(_context.Blogs, "BlogID", "BlogID", comments.BlogID);
+            return View(comments);
         }
 
-        // GET: Categories/Delete/5
+        // GET: Comments/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,36 +129,38 @@ namespace MVCWEB.Controllers
                 return NotFound();
             }
 
-            var categories = await _context.CategorieS
-                .FirstOrDefaultAsync(m => m.CategoriesID == id);
-            if (categories == null)
+            var comments = await _context.CommentS
+                .Include(c => c.Blogs)
+                .FirstOrDefaultAsync(m => m.CommentsID == id);
+            if (comments == null)
             {
                 return NotFound();
             }
 
-            return View(categories);
+            return View(comments);
         }
 
-        // POST: Categories/Delete/5
+        // POST: Comments/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var categories = await _context.CategorieS.FindAsync(id);
-            _context.CategorieS.Remove(categories);
+            var comments = await _context.CommentS.FindAsync(id);
+            _context.CommentS.Remove(comments);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CategoriesExists(int id)
+        private bool CommentsExists(int id)
         {
-            return _context.CategorieS.Any(e => e.CategoriesID == id);
+            return _context.CommentS.Any(e => e.CommentsID == id);
         }
 
-        public ActionResult AdminCategoriesList()
+        public ActionResult AdminCommentList()
         {
-            var context = _context.CategorieS;
-            return View(context);
+            var comments = _context.CommentS.Include(c => c.Blogs);
+            return View(comments);
+
         }
     }
 }
