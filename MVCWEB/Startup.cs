@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace MVCWEB
 {
@@ -29,6 +30,13 @@ namespace MVCWEB
             services.AddControllersWithViews();
             var connection = @"Server=DESKTOP-D0QHIJN;Database=DbWeb;Trusted_Connection=True;MultipleActiveResultSets=true";
             services.AddDbContext<Context>(options => options.UseSqlServer(connection));
+
+            services.AddAuthentication(
+                CookieAuthenticationDefaults.AuthenticationScheme).
+                AddCookie(x =>
+                {
+                    x.LoginPath = "/Login/Index";
+                });
             
         }
 

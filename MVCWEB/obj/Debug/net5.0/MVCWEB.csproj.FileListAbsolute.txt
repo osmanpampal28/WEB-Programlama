@@ -162,11 +162,6 @@ C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Abouts\Delete.cs
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Abouts\Details.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Abouts\Edit.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Abouts\Index.cshtml.g.cs
-C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Create.cshtml.g.cs
-C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Delete.cshtml.g.cs
-C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Details.cshtml.g.cs
-C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Edit.cshtml.g.cs
-C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Blogs\AdminBlogList.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Categories\Create.cshtml.g.cs
@@ -187,3 +182,8 @@ C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Writer\Details.c
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Writer\Edit.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Writer\Index.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Create.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Delete.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Details.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Edit.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\MVCWEB\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs

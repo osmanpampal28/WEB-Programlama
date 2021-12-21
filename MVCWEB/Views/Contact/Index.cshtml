@@ -5,61 +5,60 @@
     Layout = "~/Views/Shared/LayoutProje.cshtml";
 }
 
-@*<h1>Index</h1>
+<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Subject)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Message)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Subject)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Message)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ContactID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ContactID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ContactID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>*@
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Subject)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Message)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subject)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Message)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ContactID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ContactID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ContactID">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@
 
-@*cover fotografi getiriyor*@ 
 <div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('/miniblog/images/img_4.jpg');">
     <div class="container">
         <div class="row same-height justify-content-center">
@@ -73,15 +72,15 @@
     </div>
 </div>
 
-
-
-
-@*SendMessage*@
 <div class="site-section bg-light">
     <div class="container">
         <div class="row">
             <div class="col-md-7 mb-5">
+
+
+
                 <form action="#" class="p-5 bg-white">
+
 
                     <div class="row form-group">
                         <div class="col-md-6 mb-3 mb-md-0">
@@ -123,19 +122,20 @@
                         </div>
                     </div>
 
+
                 </form>
             </div>
             <div class="col-md-5">
 
                 <div class="p-4 mb-3 bg-white">
                     <p class="mb-0 font-weight-bold">Address</p>
-                    <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+                    <p class="mb-4">Sakarya University, Turkey</p>
 
                     <p class="mb-0 font-weight-bold">Phone</p>
-                    <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+                    <p class="mb-4"><a href="#">+90 530 626 32 41</a></p>
 
                     <p class="mb-0 font-weight-bold">Email Address</p>
-                    <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+                    <p class="mb-0"><a href="#">osmanpampal@gmail.com</a></p>
 
                 </div>
 
@@ -143,3 +143,4 @@
         </div>
     </div>
 </div>
+
