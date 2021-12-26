@@ -322,6 +322,9 @@
         "resources": {
           "en-Us/WebProjeOT.resources.dll": {
             "locale": "en-Us"
+          },
+          "tr-TR/WebProjeOT.resources.dll": {
+            "locale": "tr-TR"
           }
         },
         "compile": {
