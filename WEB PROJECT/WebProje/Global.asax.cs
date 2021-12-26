@@ -12,6 +12,7 @@ namespace WebProje
     {
         protected void Application_Start()
         {
+			// comment
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
