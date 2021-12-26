@@ -1,4 +1,4 @@
-﻿
+﻿@inject LanguageService language
 
 @{
     Layout = null;
@@ -27,6 +27,7 @@
 </head>
 <body>
 
+
     <div class="site-wrap">
 
         <div class="site-mobile-menu">
@@ -50,15 +51,15 @@
                     </div>
 
                     <div class="col-4 site-logo">
-                        <a href="/Blog/Index/" class="text-black h2 mb-0"> TSULUKIDZE && PAMPAL</a>
+                        <a href="/Blogs/Index/" class="text-black h2 mb-0"> TSULUKIDZE && PAMPAL</a>
                     </div>
 
                     <div class="col-8 text-right">
                         <nav class="site-navigation" role="navigation">
                             <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
-                                <li><a href="/Blogs/Index/">Blogs</a></li>
-                                <li><a href="/Abouts/Index/"> About </a></li>
-                                <li><a href="/Contact/Create/">Contact</a></li>
+                                <li><a href="/Blogs/Index/">@language.Getkey("Blogs")</a></li>
+                                <li><a href="/Abouts/Index/">@language.Getkey("About") </a></li>
+                                <li><a href="/Contact/Create/">@language.Getkey("Contact")</a></li>
                                 @if (User.Identity.IsAuthenticated)
                                 {
                                     if (User.IsInRole("Admin"))
@@ -68,6 +69,7 @@
 
                                 }
                                 <li><partial name="_LoginPartial" /></li>
+                                
                                 @*<li class="d-none d-lg-inline-block"><a href="#" class="js-search-toggle"><span class="icon-search"></span></a></li>*@
                             </ul>
 
@@ -90,25 +92,38 @@
             <div class="row mb-5">
 
                 <div class="col-md-3 ml-auto">
+                    <ul class="language">
+
+                        <li><a asp-controller="Blogs" asp-action="ChangeLanguage" asp-route-culture="en-US" class="nav-link"> @language.Getkey("English")</a></li>
+
+                        <li><a asp-controller="Blogs" asp-action="ChangeLanguage" asp-route-culture="tr-TR" class="nav-link"> @language.Getkey("Turkish")</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-md-3 ml-auto">
                     <!-- <h3 class="footer-heading mb-4">Navigation</h3> -->
                     <ul class="list-unstyled float-left mr-5">
-                        <li><a href="/Blog/Index/">Main</a></li>
-                        <li><a href="/About/Index/">About Us </a></li>
-                        <li><a href="/Writer/Login/">Login as Writer</a></li>
-                        <li><a href="/About/Index/">Contact</a></li>
+                        <li><a href="/Blogs/Index/">@language.Getkey("Main")</a></li>
+                        <li><a href="/Abouts/Index/">@language.Getkey("About") </a></li>
+                        <li><a href="/Contact/Create/">@language.Getkey("Contact")</a></li>
+                        <li><a href="/Blogs/AdminBlogList/">Login as Admin</a></li>
+
                     </ul>
                 </div>
                 <div class="col-md-4">
 
 
                     <div>
-                        <h3 class="footer-heading mb-4">Stay Connected to US </h3>
+                        <h3 class="footer-heading mb-4">@language.Getkey("Stay Connected to US") </h3>
                         <p>
-                            <a href="#"><span class="icon-facebook pt-2 pr-2 pb-2 pl-0"></span></a>
-                            <a href="#"><span class="icon-twitter p-2"></span></a>
-                            <a href="#"><span class="icon-instagram p-2"></span></a>
-                            <a href="#"><span class="icon-rss p-2"></span></a>
-                            <a href="#"><span class="icon-envelope p-2"></span></a>
+                            <a target="_blank" href="https://www.facebook.com/tsulukidze8"><span class="icon-facebook pt-2 pr-2 pb-2 pl-0"></span></a>
+                            <a target="_blank" href="https://www.instagram.com/osmnpmpl28/"><span class="icon-instagram p-2"></span></a>
+                            
+                            @*<a href="#"><span class="icon-twitter p-2"></span></a>
+
+                                <a href="#"><span class="icon-rss p-2"></span></a>
+                                <a href="#"><span class="icon-envelope p-2"></span></a>*@
                         </p>
                     </div>
                 </div>

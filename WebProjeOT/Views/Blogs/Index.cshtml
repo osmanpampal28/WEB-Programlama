@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<WebProjeOT.Models.Blog>
-
+@inject LanguageService language
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/LayoutProje.cshtml";
@@ -70,7 +70,7 @@
     <div class="container">
         <div class="row mb-5">
             <div class="col-12">
-                <h2>View  Blogs </h2>
+                <h2>@language.Getkey("View  Blogs")</h2>
             </div>
         </div>
         <div class="row">
@@ -115,7 +115,7 @@
                             </div>
 
                             @*<p>@i.BlogDetail.Substring(0, i.BlogDetail.Substring(0, 200).LastIndexOf(""))...</p>*@
-                            <p><a href="/Blogs/Details/@i.BlogID">Read More</a></p>
+                            <p><a href="/Blogs/Details/@i.BlogID">@language.Getkey("Read More")</a></p>
                         </div>  
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<WebProjeOT.Models.About>
-
+@inject LanguageService language
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/LayoutProje.cshtml";
@@ -58,7 +58,7 @@
         <div class="row same-height justify-content-center">
             <div class="col-md-12 col-lg-10">
                 <div class="post-entry text-center">
-                    <h1 class="">About Us</h1>
+                    <h1 class="">@language.Getkey("About Us")</h1>
                     <p class="lead mb-4 text-white">Sakarya Üniversitesi Bilgisayar Mühendisliği Öğrencileri.<br />Bizi Daha Yakından Tanımak İster Misiniz?</p>
                 </div>
             </div>

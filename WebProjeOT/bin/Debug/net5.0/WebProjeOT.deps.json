@@ -319,6 +319,11 @@
         "runtime": {
           "WebProjeOT.dll": {}
         },
+        "resources": {
+          "en-Us/WebProjeOT.resources.dll": {
+            "locale": "en-Us"
+          }
+        },
         "compile": {
           "WebProjeOT.dll": {}
         }

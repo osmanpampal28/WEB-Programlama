@@ -191,3 +191,10 @@ C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Areas\Identity\Pag
 C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\WebProjeOT\bin\Debug\net5.0\en-Us\WebProjeOT.resources.dll
+C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\WebProjeOT.Resources.SharedResource.en-Us.resources
+C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\WebProjeOT.csproj.GenerateResource.cache
+C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\en-Us\WebProjeOT.resources.dll
+C:\Users\TSULUKIDZE\Desktop\WebProjeOT\bin\Debug\net5.0\tr-TR\WebProjeOT.resources.dll
+C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\WebProjeOT.Resources.SharedResource.tr-TR.resources
+C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\tr-TR\WebProjeOT.resources.dll

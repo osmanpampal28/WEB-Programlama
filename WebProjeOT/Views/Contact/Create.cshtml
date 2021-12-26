@@ -1,5 +1,5 @@
 ﻿@model WebProjeOT.Models.Contact
-
+@inject LanguageService language
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/LayoutProje.cshtml";
@@ -12,8 +12,8 @@
         <div class="row same-height justify-content-center">
             <div class="col-md-12 col-lg-10">
                 <div class="post-entry text-center">
-                    <h1 class="">Contact Us</h1>
-                    <p class="lead mb-4 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, adipisci?</p>
+                    <h1 class="">@language.Getkey("Contact Us")</h1>
+                    <p class="lead mb-4 text-white">Leave your Comment You are Important for us</p>
                 </div>
             </div>
         </div>
