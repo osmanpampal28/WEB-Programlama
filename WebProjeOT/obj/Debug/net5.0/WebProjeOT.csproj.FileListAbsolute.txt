@@ -186,3 +186,8 @@ C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Views\Abouts\Delet
 C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Views\Abouts\Details.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Views\Abouts\Edit.cshtml.g.cs
 C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Views\Abouts\Index.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\TSULUKIDZE\Desktop\WebProjeOT\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs

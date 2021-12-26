@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,8 @@ namespace WebProjeOT.Controllers
         }
 
         // GET: Blogs
+       
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Blogs.Include(b => b.Categories).Include(b => b.Writer);
@@ -27,6 +30,10 @@ namespace WebProjeOT.Controllers
         }
 
         // GET: Blogs/Details/5
+        //[Authorize]
+
+        [Authorize(Roles = "User, Admin")]
+      
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -47,6 +54,7 @@ namespace WebProjeOT.Controllers
         }
 
         // GET: Blogs/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewData["CategoriesID"] = new SelectList(_context.CategorieS, "CategoriesID", "CategoriesID");
@@ -59,6 +67,7 @@ namespace WebProjeOT.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("BlogID,BlogHeader,BlogDetail,BlogDate,BlogImage,CategoriesID,WriterID")] Blog blog)
         {
             if (ModelState.IsValid)
@@ -73,6 +82,7 @@ namespace WebProjeOT.Controllers
         }
 
         // GET: Blogs/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -95,6 +105,7 @@ namespace WebProjeOT.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("BlogID,BlogHeader,BlogDetail,BlogDate,BlogImage,CategoriesID,WriterID")] Blog blog)
         {
             if (id != blog.BlogID)
@@ -128,6 +139,7 @@ namespace WebProjeOT.Controllers
         }
 
         // GET: Blogs/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -150,6 +162,7 @@ namespace WebProjeOT.Controllers
         // POST: Blogs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var blog = await _context.Blogs.FindAsync(id);
@@ -158,12 +171,13 @@ namespace WebProjeOT.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Admin")]
         private bool BlogExists(int id)
         {
             return _context.Blogs.Any(e => e.BlogID == id);
         }
 
-
+        [Authorize(Roles = "Admin")]
         public ActionResult AdminBlogList()
         {
             var context = _context.Blogs.Include(b => b.Categories).Include(b => b.Writer);
